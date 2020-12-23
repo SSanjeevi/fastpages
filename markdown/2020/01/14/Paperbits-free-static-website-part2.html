@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to use Paperbits Open source Drag and drop Content builder and free static website generator to develop a website and host it in GitHub pages freely — Part II (Detailed steps) | LKGforIT</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="How to use Paperbits Open source Drag and drop Content builder and free static website generator to develop a website and host it in GitHub pages freely — Part II (Detailed steps)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is a part-II article continuing this part-I, Here you will see detailed steps for working in Paperbits framework." />
+<meta property="og:description" content="This is a part-II article continuing this part-I, Here you will see detailed steps for working in Paperbits framework." />
+<link rel="canonical" href="https://lkgforit.com/markdown/2020/01/14/Paperbits-free-static-website-part2.html" />
+<meta property="og:url" content="https://lkgforit.com/markdown/2020/01/14/Paperbits-free-static-website-part2.html" />
+<meta property="og:site_name" content="LKGforIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-14T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"This is a part-II article continuing this part-I, Here you will see detailed steps for working in Paperbits framework.","url":"https://lkgforit.com/markdown/2020/01/14/Paperbits-free-static-website-part2.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkgforit.com/markdown/2020/01/14/Paperbits-free-static-website-part2.html"},"headline":"How to use Paperbits Open source Drag and drop Content builder and free static website generator to develop a website and host it in GitHub pages freely — Part II (Detailed steps)","dateModified":"2020-01-14T00:00:00-06:00","datePublished":"2020-01-14T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lkgforit.com/feed.xml" title="LKGforIT" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','G-7LPPM0LXN7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LKGforIT</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Us</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How to use Paperbits Open source Drag and drop Content builder and free static website generator to develop a website and host it in GitHub pages freely — Part II (Detailed steps)</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-01-14T00:00:00-06:00" itemprop="datePublished">
+        Jan 14, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+</ul><p>This is a part-II article continuing <a href="https://medium.com/lkg-in-it/how-to-use-paperbits-open-source-drag-and-drop-content-builder-and-free-website-generator-to-57408d333118">this</a> part-I, Here you will see detailed steps for working in Paperbits framework.</p>
+
+<p>This Paperbits framework is used in Azure API Management Developer portal, so you can use this article to <strong>Customize the Developer portal</strong>.</p>
+
+<p>For exploring this Paperbits framework and also to contribute someone with the website, I have contributed this <a href="https://www.youtube.com/channel/UCCgzOyPgoN0Kqnka0BSCM1Q">Youtube Channel</a> to have an website developed using Paperbits framework for free as an contribution to education.</p>
+
+<p>You can find that website here: <a href="https://tnpscquickies.com/">https://tnpscquickies.com</a> which is completely developed by this framework and hosted in GitHub pages freely. Follow this tutorial for the detailed steps for the same.</p>
+
+<p>After following <a href="https://medium.com/lkg-in-it/how-to-use-paperbits-open-source-drag-and-drop-content-builder-and-free-website-generator-to-57408d333118">Part-I article</a> clone of the Paperbits repo and running the application locally using npm start command a portal will open like the image below at url: <a href="http://localhost:8080/">http://localhost:8080/</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/7400/1*Vs9CC0ujvoG80mj4hRdqtA.png" alt=""></p>
+
+<p>In the above image the highlighted ones are the menu to edit the website.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2038/1*8cvwsGGhODnwsq3QwAvllA.png" alt=""></p>
+
+<p>Above image shows the pages menu, where you can add a page or edit a page properties, if we select a page it will show like below menu to edit title and link of the page(URL) and also will show the current page in editor to edit the content.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3412/1*chUpmbT5tG7B6KgEuxcUPw.png" alt=""></p>
+
+<p>Hereafter will use screenshots from the custom site I developed. To add/manage any image click on media menu like below:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*YXwRxOHcYWS-bhJKHUa4gQ.png" alt=""></p>
+
+<p>Layouts menu is the next one where you can edit the layout which will apply to many pages which will be common — we have Home page layout and other layouts for other pages.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Pch6corKX72zBtFOtAXWqA.png" alt=""></p>
+
+<p>Then Navigation menu is used for add/manage the menus.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*yhbGPWTxu5yrygYt7Xj6aQ.png" alt=""></p>
+
+<p>And in settings you can manage the site header and icon for site.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*QO74a3-8Lpc_CfS1Me5fWw.png" alt=""></p>
+
+<p>And the last menu is the Styles which is a single place for all the styles of the site which can be configurable like Fonts, Typography, Colors, Gradients, Form Controls, buttons and Cards:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/6888/1*rtN6lzRppYm2SOuBSzAXsQ.png" alt=""></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5358/1*ob9psAU_8e85q44kNtUWTA.png" alt=""></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3650/1*Kjk_FuzcmnEVId264RokyQ.png" alt=""></p>
+
+<p>We can add menu like this:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5070/1*X9eniHVjYmW5b5u0iNSEEQ.png" alt=""></p>
+
+<p>After doing any edit click on save button highlighted below:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5652/1*yCWrIk190Ew81COKiPiwyQ.png" alt=""></p>
+
+<p>Then an json file will download copy the file and replace it in the following file: \src\data\demo.json, now your website will reload or click F5 to refresh the changes.</p>
+
+<p>Editing a Page:</p>
+
+<p>Select a page in pages menu, then you can add a section like on hover of your mouse in center of a section you can see plus sign highlighted in green below for adding section and for editing any section click edit icon highlighted in red below.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/6634/1*lDE6R7TMu4IdlWNRi0MB9g.png" alt=""></p>
+
+<p>On click of add section following window will open where you can select section with different type of widgets showing empty widgets.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2150/1*duGAyOnMg6sIhZGoxrnRZQ.png" alt=""></p>
+
+<p>on clicking blocks you will see predefined templates of blocks which can be reused</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2050/1*hPzC1dZ-iwhZYi1e5KJx7Q.png" alt=""></p>
+
+<p>To add an block to saved one select any customized blocks like below and click highlighted plus button in yellow</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5704/1*D0w2vJbzeFRjJvvIkSAacw.png" alt=""></p>
+
+<p>Give it a name in the window opened</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*1sRub_vno2Kvy-Pwdyzm-g.png" alt=""></p>
+
+<p>Now on adding section you will find that custom block in saved section like below, which you can reuse it:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2098/1*ld604sAmq1Dzz6BYHiC3xQ.png" alt=""></p>
+
+<p>You can edit the background of Section by clicking on edit of section and then selecting background with colors or gradients.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*RoQYHVnWj6qySdSNAlVHUw.png" alt=""></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*ocVgzwfShtLfZ9TpJ2BLGQ.png" alt=""></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*iHD05mt13Hkf3YARdXFIyA.png" alt=""></p>
+
+<p>I have selected the gradient for overall website here.</p>
+
+<p>You can edit the content of the widget on clicking edit button of an widget</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3742/1*83_dcGUDvneB1XeeKXb7Ew.png" alt=""></p>
+
+<p>Similar to adding an section we can add an widget like below plus button which shows on hover of an widget in block, where you can add button, testimonials, menu, card, collapsible panel, search website, Textblock and Forms.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2168/1*CToqd4bPsWNG_4YswG-pgw.png" alt=""></p>
+
+<p>Inside a card we can add picture select it from media library we added in menu or upload new one and adjust properties of it, like below:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3186/1*9-iI2loyC7kY2gbSnyROIg.png" alt=""></p>
+
+<p>Final website is available here:</p>
+
+<p><a href="https://tnpscquickies.com/">https://tnpscquickies.com</a></p>
+
+<p>For your reference I have placed the whole customized website code along with Paperbits source code in the repo:
+<a href="https://github.com/SSanjeevi/Paperbits-Clone-Sample-TNPSCQuickies"><strong>SSanjeevi/Paperbits-Clone-Sample-TNPSCQuickies</strong>
+<em>This repository contains an example of how using Paperbits you can enable advanced content authoring tools in your web…</em>github.com</a></p>
+
+<p>Its hosted in the following public repository as GitHub pages:
+<a href="https://github.com/SSanjeevi/BlazorAppClient"><strong>SSanjeevi/BlazorAppClient</strong>
+<em>Contribute to SSanjeevi/BlazorAppClient development by creating an account on GitHub.</em>github.com</a></p>
+
+<p>There you can refer i have added the following files in addition to the website files generated from Paperbits framework:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/SSanjeevi/BlazorAppClient/blob/master/.nojekyll">nojekyll</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/SSanjeevi/BlazorAppClient/blob/master/404.html">404.html</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/SSanjeevi/BlazorAppClient/blob/master/CNAME">CNAME</a></p>
+  </li>
+</ul>
+
+<p>In order for the custom host website to work.</p>
+
+  </div><a class="u-url" href="/markdown/2020/01/14/Paperbits-free-static-website-part2.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An blog for the beginners in Information Technology.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ssanjeevi" title="ssanjeevi"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
