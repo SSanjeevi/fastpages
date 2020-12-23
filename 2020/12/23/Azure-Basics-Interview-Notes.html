@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Azure Basics Interview Notes | LKGforIT</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Azure Basics Interview Notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Azure Azure Types:" />
+<meta property="og:description" content="Azure Azure Types:" />
+<link rel="canonical" href="https://lkgforit.com/2020/12/23/Azure-Basics-Interview-Notes.html" />
+<meta property="og:url" content="https://lkgforit.com/2020/12/23/Azure-Basics-Interview-Notes.html" />
+<meta property="og:site_name" content="LKGforIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-23T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Azure Azure Types:","url":"https://lkgforit.com/2020/12/23/Azure-Basics-Interview-Notes.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkgforit.com/2020/12/23/Azure-Basics-Interview-Notes.html"},"headline":"Azure Basics Interview Notes","dateModified":"2020-12-23T00:00:00-06:00","datePublished":"2020-12-23T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lkgforit.com/feed.xml" title="LKGforIT" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','G-7LPPM0LXN7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LKGforIT</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Us</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Azure Basics Interview Notes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-23T00:00:00-06:00" itemprop="datePublished">
+        Dec 23, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ol>
+  <li>
+    <p><strong>Azure</strong></p>
+
+    <ol>
+      <li><strong>Azure Types:</strong></li>
+    </ol>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Types of Azure Clouds</p>
+
+  <p>There are mainly three types of clouds in Microsoft Azure are:</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>PAAS – (Platform as a service) is a computing platform which includes an operating system, programming language execution environment, database or web services. This Azure service is used by developers and application providers.</p>
+  </li>
+  <li>
+    <p>SAAS – (Software as a service) is software which is centrally hosted and managed. It is a single version of the application is used for all customers. You can scale out to multiple instances. This helps you to ensure the best performance in all locations. The software is licensed through a monthly or annual subscription. MS Exchange, Office, Dynamics are offered as a SaaS</p>
+  </li>
+  <li>
+    <p>IASS - (Infrastructure as a Service) is the foundational cloud platform layer. This Azure service is used by IT administrators for processing, storage, networks or any other fundamental computer operations.</p>
+
+    <ol>
+      <li><strong>Azure Functions:</strong></li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Azure Functions makes the app development process more productive, and lets you launch serverless applications on Microsoft Azure. It helps in processing data, coordinating with different systems for IoT, integrating various processes and systems and building simple APIs and microservices.</p>
+</blockquote>
+
+<ol>
+  <li><strong>Features</strong></li>
+</ol>
+
+<p>Here are some key features of Functions:</p>
+
+<ul>
+  <li>
+    <p>Choice of language - Write functions using your choice of C#, Java, Javascript, Python, and other languages. See Supported languages for the complete list.</p>
+  </li>
+  <li>
+    <p>Pay-per-use pricing model - Pay only for the time spent running your code. See the Consumption hosting plan option in the pricing section.</p>
+  </li>
+  <li>
+    <p>Bring your own dependencies - Functions supports NuGet and NPM, so you can use your favorite libraries.</p>
+  </li>
+  <li>
+    <p>Integrated security - Protect HTTP-triggered functions with OAuth providers such as Azure Active Directory, Facebook, Google, Twitter, and Microsoft Account.</p>
+  </li>
+  <li>
+    <p>Simplified integration - Easily leverage Azure services and software-as-a-service (SaaS) offerings.</p>
+  </li>
+  <li>
+    <p>Flexible development - Code your functions right in the portal or set up continuous integration and deploy your code through GitHub, Azure DevOps Services, and other supported development tools.</p>
+  </li>
+  <li>
+    <p>Open-source - The Functions runtime is open-source and available on GitHub.</p>
+
+    <ol>
+      <li><strong>Types:</strong></li>
+    </ol>
+  </li>
+</ul>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <p>HTTPTrigger - Trigger the execution of your code by using an HTTP request. For an example, see Create your first function.</p>
+  </li>
+  <li>
+    <p>TimerTrigger - Execute cleanup or other batch tasks on a predefined schedule. For an example, see Create a function triggered by a timer.</p>
+  </li>
+  <li>
+    <p>CosmosDBTrigger - Process Azure Cosmos DB documents when they are added or updated in collections in a NoSQL database. For more information, see Azure Cosmos DB bindings.</p>
+  </li>
+  <li>
+    <p>BlobTrigger - Process Azure Storage blobs when they are added to containers. You might use this function for image resizing. For more information, see Blob storage bindings.</p>
+  </li>
+  <li>
+    <p>QueueTrigger - Respond to messages as they arrive in an Azure Storage queue. For more information, see Azure Queue storage bindings.</p>
+  </li>
+  <li>
+    <p>EventGridTrigger - Respond to events delivered to a subscription in Azure Event Grid. Supports a subscription-based model for receiving events, which includes filtering. A good solution for building event-based architectures. For an example, see Automate resizing uploaded images using Event Grid.</p>
+  </li>
+  <li>
+    <p>EventHubTrigger - Respond to events delivered to an Azure Event Hub. Particularly useful in application instrumentation, user experience or workflow processing, and internet-of-things (IoT) scenarios. For more information, see Event Hubs bindings.</p>
+  </li>
+  <li>
+    <p>ServiceBusQueueTrigger - Connect your code to other Azure services or on-premises services by listening to message queues. For more information, see Service Bus bindings.</p>
+  </li>
+  <li>
+    <p>ServiceBusTopicTrigger - Connect your code to other Azure services or on-premises services by subscribing to topics. For more information, see Service Bus bindings.</p>
+
+    <ol>
+      <li><strong>App Service:</strong></li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Azure App Service is a fully managed “Platform as a Service” (PaaS) that integrates Microsoft Azure Websites, Mobile Services, and BizTalk Services into a single service, adding new capabilities that enable integration with on-premises or cloud systems.</p>
+
+  <p><img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image1.png" alt="" /></p>
+</blockquote>
+
+<ol>
+  <li><strong>Microsoft Service Fabric:</strong></li>
+</ol>
+
+<blockquote>
+  <p>Microsoft Azure Service Fabric is the next-generation cloud application platform for highly scalable, highly reliable distributed applications. It introduces many new features for packaging, deploying, upgrading, and managing distributed cloud applications.</p>
+</blockquote>
+
+<ol>
+  <li><strong>Cloud Service:</strong></li>
+</ol>
+
+<blockquote>
+  <p>Azure Cloud Services is an example of a platform as a service (PaaS). Like Azure App Service, this technology is designed to support applications that are scalable, reliable, and inexpensive to operate.</p>
+</blockquote>
+
+<p><img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image2.png" alt="" /></p>
+
+<ol>
+  <li>Two types of Azure Cloud Services roles. The only difference between the two is how your role is hosted on the VMs:</li>
+</ol>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <p>Web role: Automatically deploys and hosts your app through IIS.</p>
+  </li>
+  <li>
+    <p>Worker role: Does not use IIS, runs your app standalone.</p>
+  </li>
+</ul>
+
+<p>A cloud service is created from three components, the service definition (.csdef), the service config (.cscfg), and a service package (.cspkg). Both the ServiceDefinition.csdef and ServiceConfig.cscfg files are XML-based and describe the structure of the cloud service and how it’s configured; collectively called the model. The ServicePackage.cspkg is a zip file that is generated from the ServiceDefinition.csdef and among other things, contains all the required binary-based dependencies. Azure creates a cloud service from both the ServicePackage.cspkg and the ServiceConfig.cscfg.</p>
+
+<p>Once the cloud service is running in Azure, you can reconfigure it through the ServiceConfig.cscfg file, but you cannot alter the definition.</p>
+
+<ol>
+  <li><strong>Differences between Cloud Services and Service Fabric before</strong></li>
+</ol>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <p>Cloud Services is about deploying applications as VMs.</p>
+  </li>
+  <li>
+    <p>Service Fabric is about deploying applications to existing VMs or machines running Service Fabric on Windows or Linux</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Cloud Service Sample below:</p>
+
+  <p><img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image3.png" alt="" /></p>
+
+  <p>Service Fabric Sample Below:<img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image4.png" alt="" /></p>
+
+  <p>Cloud service Architecture:<img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image5.png" alt="" /></p>
+
+  <p>Service Fabric Architecture -for migrated ones and new development ones</p>
+
+  <p>Service Fabric – can be stateful or stateless, but cloud services are stateless and need to have DB for maintaining connectivity and also connections to other items through queue - but in-service fabric we don’t need Queue for connectivity.</p>
+
+  <p>Service Fabric architectures: <img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image6.png" alt="" /></p>
+
+  <p><strong>Service Fabric without migration or without queues:</strong></p>
+
+  <p><img src="https://lkgforit.com/assets/img/2020-12-23-Azure-Basics-Interview-Notes/media/image7.png" alt="" /></p>
+</blockquote>
+
+<p>Advantages of Service Fabric:</p>
+
+<ul>
+  <li>
+    <p>Fast deployment times. Creating VM instances can be time consuming. In Service Fabric, VMs are only deployed once to form a cluster that hosts the Service Fabric application platform. From that point on, application packages can be deployed to the cluster very quickly.</p>
+  </li>
+  <li>
+    <p>High-density hosting. In Cloud Services, a Worker Role VM hosts one workload. In Service Fabric, applications are separate from the VMs that run them, meaning you can deploy a large number of applications to a small number of VMs, which can lower overall cost for larger deployments.</p>
+  </li>
+  <li>
+    <p>The Service Fabric platform can run anywhere that has Windows Server or Linux machines, whether it’s Azure or on-premises. The platform provides an abstraction layer over the underlying infrastructure so your application can run on different environments.</p>
+  </li>
+  <li>
+    <p>Distributed application management. Service Fabric is a platform that not only hosts distributed applications, but also helps manage their lifecycle independently of the hosting VM or machine lifecycle.</p>
+  </li>
+</ul>
+
+  </div><a class="u-url" href="/2020/12/23/Azure-Basics-Interview-Notes.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An blog for the beginners in Information Technology.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ssanjeevi" title="ssanjeevi"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

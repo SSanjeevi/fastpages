@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interview Notes Dotnet 2 | LKGforIT</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Interview Notes Dotnet 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ASP.NET Core Running under IIS" />
+<meta property="og:description" content="ASP.NET Core Running under IIS" />
+<link rel="canonical" href="https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet-2.html" />
+<meta property="og:url" content="https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet-2.html" />
+<meta property="og:site_name" content="LKGforIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-23T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"ASP.NET Core Running under IIS","url":"https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet-2.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet-2.html"},"headline":"Interview Notes Dotnet 2","dateModified":"2020-12-23T00:00:00-06:00","datePublished":"2020-12-23T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lkgforit.com/feed.xml" title="LKGforIT" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','G-7LPPM0LXN7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LKGforIT</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Us</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Interview Notes Dotnet 2</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-23T00:00:00-06:00" itemprop="datePublished">
+        Dec 23, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="aspnet-core-running-under-iis"><a href="https://weblog.west-wind.com/posts/2017/Mar/16/More-on-ASPNET-Core-Running-under-IIS">ASP.NET Core Running under IIS</a></h2>
+
+<p>IIS acts as a front end proxy to the backend Kestrel Console application that hosts the .NET based Kestrel Web server.</p>
+
+<p><img src="https://lkgforit.com/assets/img/2020-12-23-Interview-Notes-Dotnet-2/media/image1.png" alt="" /></p>
+
+<p>In this scenario, IIS uses a very low level and early pipeline <strong>AspNetCoreModule</strong> that intercepts all requests pointed at it (via a module mapping) and then forwards those requests to Kestrel on a different port. Requests come in on standard HTTP ports (80 and 443 for SSL) and IIS proxies the incoming requests to a different port that Kestrel is listening on.</p>
+
+<p>By default the module configuration forwards all requests to Kestrel, but you have some very limited control over what gets routed to the module.</p>
+
+<p> <strong>w3wp.exe</strong> process (there may be more than one for each application pool so you have find the right one which you can do by looking at the command line arguments in Process Explorer or Task Manager) and the <strong>dotnet.exe</strong> process</p>
+
+<p>You can see that both <strong>w3wp.exe</strong> and <strong>dotnet.exe</strong> - which runs the Kestrel Web server process - are using the same <strong>NETWORK SERVICE</strong> account. Keep in mind that you may have multiple application pools, and multiple instances of .NET Core Application’s running at the same time in which case each application pool and kestrel process will launch in their associated security context.</p>
+
+<p><img src="https://lkgforit.com/assets/img/2020-12-23-Interview-Notes-Dotnet-2/media/image2.png" alt="" /></p>
+
+<p><strong>How to enable Attribute Routing?</strong></p>
+
+<p>Just add the method — “MapMvcAttributeRoutes()” to enable attribute routing as shown below</p>
+
+<p><em>public static void RegisterRoutes(RouteCollection routes)</em></p>
+
+<p><em>{</em></p>
+
+<p><em>routes.IgnoreRoute(“{resource}.axd/{*pathInfo}”);</em></p>
+
+<p><em>//enabling attribute routing</em></p>
+
+<p><em>routes.MapMvcAttributeRoutes();</em></p>
+
+<p><em>//convention-based routing</em></p>
+
+<p><em>routes.MapRoute</em></p>
+
+<p><em>(</em></p>
+
+<p><em>name: “Default”,</em></p>
+
+<p><em>url: “{controller}/{action}/{id}”,</em></p>
+
+<p><em>defaults: new { controller = “Customer”, action = “GetCustomerList”, id = UrlParameter.Optional }</em></p>
+
+<p><em>);</em></p>
+
+<p><em>}</em></p>
+
+<p>What is routes.IgnoreRoute(“{resource}.axd/{*pathInfo}”)</p>
+
+<p>.axd files don’t exist physically. ASP.NET uses URLs with .axd extensions (ScriptResource.axd and WebResource.axd) internally, and they are handled by an HttpHandler.</p>
+
+<p>Therefore, you should keep this rule, to prevent ASP.NET MVC from trying to handle the request instead of letting the dedicated HttpHandler do it.</p>
+
+<p><strong>9. Explain JSON Binding?</strong></p>
+
+<p>JavaScript Object Notation (JSON) binding support started from MVC3 onwards via the new JsonValueProviderFactory, which allows the action methods to accept and model-bind data in JSON format. This is useful in Ajax scenarios like client templates and data binding that need to post data back to the server.</p>
+
+<p><strong>Active Directory Federation Services (ADFS):</strong></p>
+
+<p>Active Directory Federation Services (ADFS) is a <a href="https://www.okta.com/products/single-sign-on/">Single Sign-On</a> (SSO) solution created by Microsoft. As a component of Windows Server operating systems, it provides users with authenticated access to applications that are not capable of using Integrated Windows Authentication (IWA) through Active Directory (AD).</p>
+
+<p>Developed to provide flexibility, ADFS gives organizations the ability to control their employees’ accounts while simplifying the user experience: employees only need to remember a single set of credentials to access multiple applications through SSO.</p>
+
+<p>How does ADFS work?</p>
+
+<p>ADFS manages authentication through a proxy service hosted between AD and the target application. It uses a Federated Trust, linking ADFS and the target application to grant access to users. This enables users to log onto the federated application through SSO without needing to authenticate their identity on application directly.</p>
+
+<p>The authentication process generally follows these four steps:</p>
+
+<ol>
+  <li>
+    <blockquote>
+      <p>The user navigates to a URL provided by the ADFS service.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>The ADFS service then authenticates the user via the organization’s AD service.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Upon authenticating, the ADFS service then provides the user with an authentication claim.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>The user’s browser then forwards this claim to the target application, which either grants or denies access based on the Federated Trust service created.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h1 id="grant-limited-access-to-azure-storage-resources-using-shared-access-signatures-sas">Grant limited access to Azure Storage resources using shared access signatures (SAS)</h1>
+
+<p>A shared access signature (SAS) provides secure delegated access to resources in your storage account without compromising the security of your data. With a SAS, you have granular control over how a client can access your data. </p>
+
+<h2 id="types-of-shared-access-signatures">Types of shared access signatures</h2>
+
+<p>Azure Storage supports three types of shared access signatures:</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>User delegation SAS (preview).</strong> A user delegation SAS is secured with Azure Active Directory (Azure AD) credentials and also by the permissions specified for the SAS. A user delegation SAS applies to Blob storage only.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p>For more information about the user delegation SAS, see <a href="https://docs.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas">Create a user delegation SAS (REST API)</a>.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Service SAS.</strong> A service SAS is secured with the storage account key. A service SAS delegates access to a resource in only one of the Azure Storage services: Blob storage, Queue storage, Table storage, or Azure Files.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <p>For more information about the service SAS, see <a href="https://docs.microsoft.com/en-us/rest/api/storageservices/create-service-sas">Create a service SAS (REST API)</a>.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>Account SAS.</strong> An account SAS is secured with the storage account key. An account SAS delegates access to resources in one or more of the storage services. All of the operations available via a service or user delegation SAS are also available via an account SAS. Additionally, with the account SAS, you can delegate access to operations that apply at the level of the service, such as <strong>Get/Set Service Properties</strong> and <strong>Get Service Stats</strong> operations. You can also delegate access to read, write, and delete operations on blob containers, tables, queues, and file shares that are not permitted with a service SAS.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><strong>3. What is an IL?</strong></p>
+
+<p>Intermediate Language is also known as MSIL (Microsoft Intermediate Language) or CIL (Common Intermediate Language). All .NET source code is compiled to IL. IL is then converted to machine code at the point where the software is installed, or at run-time by a Just-In-Time (JIT) compiler.</p>
+
+<p><strong>4. What is code access security (CAS)?</strong></p>
+
+<p>Code access security (CAS) is part of the .NET security model that prevents unauthorized access of resources and operations, and restricts the code to perform particular tasks.</p>
+
+<p><strong>5. What is Difference between NameSpace and Assembly?</strong></p>
+
+<p>Assembly is physical grouping of logical units, Namespace, logically groups classes.</p>
+
+<p>Namespace can span multiple assembly.</p>
+
+<p><strong>6. Mention the execution process for managed code.</strong></p>
+
+<p>A)Choosing a language compiler</p>
+
+<p>B) Compiling the code to MSIL</p>
+
+<p>C) Compiling MSIL to native code</p>
+
+<p>D) Executing the code.</p>
+
+<p><strong>7. What is Microsoft Intermediate Language (MSIL)?</strong></p>
+
+<p>The .NET Framework is shipped with compilers of all .NET programming languages to develop programs. There are separate compilers for the Visual Basic, C#, and Visual C++ programming languages in .NET Framework. Each .NET compiler produces an intermediate code after compiling the source code. The intermediate code is common for all languages and is understandable only to .NET environment. This intermediate code is known as MSIL.</p>
+
+<p><strong>8. What is managed extensibility framework?</strong></p>
+
+<p>Managed extensibility framework (MEF) is a new library that is introduced as a part of .NET 4.0 and Silverlight 4. It helps in extending your application by providing greater reuse of applications and components. MEF provides a way for host application to consume external extensions without any configuration requirement.</p>
+
+<p><strong>9. Which method do you use to enforce garbage collection in .NET?</strong></p>
+
+<p>The System.GC.Collect() method.</p>
+
+<p><strong>10. What is the difference between int and int32.</strong></p>
+
+<p>There is no difference between int and int32. System.Int32 is a .NET Class and int is an alias name for System.Int32.</p>
+
+<p><strong>11. What are tuples?</strong></p>
+
+<p>Tuple is a fixed-size collection that can have elements of either same or different data types. Similar to arrays, a user must have to specify the size of a tuple at the time of declaration. Tuples are allowed to hold up from 1 to 8 elements and if there are more than 8 elements, then the 8th element can be defined as another tuple. Tuples can be specified as parameter or return type of a method.</p>
+
+<p><strong>12. What is the full form of ADO?</strong></p>
+
+<p>The full form of ADO is ActiveX Data Object.</p>
+
+<p><strong>13. What are the two fundamental objects in <a href="http://ado.net/">ADO.NET?</a></strong></p>
+
+<p>DataReader and DataSet are the two fundamental objects in <a href="http://ado.net/">ADO.NET</a></p>
+
+<p><strong>14. What is the meaning of object pooling?</strong></p>
+
+<p>Object pooling is a concept of storing a pool (group) of objects in memory that can be reused later as needed. Whenever, a new object is required to create, an object from the pool can be allocated for this request; thereby, minimizing the object creation. A pool can also refer to a group of connections and threads. Pooling, therefore, helps in minimizing the use of system resources, improves system scalability, and performance.</p>
+
+<p><strong>15. Mention the namespace that is used to include .NET Data Provider for SQL server in .NET code.</strong></p>
+
+<p>The System.Data.SqlClient namespace.</p>
+
+<p><strong>16. Which architecture does Datasets follow?</strong></p>
+
+<p>Datasets follow the disconnected data architecture.</p>
+
+<p><strong>17. What is the role of the DataSet object in <a href="http://ado.net/">ADO.NET?</a></strong></p>
+
+<p>One of the major component of <a href="http://ado.net/">ADO.NET</a> is the DataSet object, which always remains disconnected from the database and reduces the load on the database.</p>
+
+<p><strong>18. Which property is used to check whether a DataReader is closed or opened?</strong></p>
+
+<p>The IsClosed property is used to check whether a DataReader is closed or opened. This property returns a true value if a Data Reader is closed, otherwise a false value is returned.</p>
+
+<p><strong>19. Name the method that needs to be invoked on the DataAdapter control to fill the generated DataSet with data?</strong></p>
+
+<p>The Fill() method is used to fill the dataset with data.</p>
+
+<p><strong>20. What are the pre-requisites for connection pooling?</strong></p>
+
+<p>There must be multiple processes to share the same connection describing the same parameters and security settings. The connection string must be identical.</p>
+
+<p><strong>21. Which adapter should you use, if you want to get the data from an Access database?</strong></p>
+
+<p>OleDbDataAdapter is used to get the data from an Access database.</p>
+
+<p><strong>22. What are different types of authentication techniques that are used in connection strings to connect .NET applications with Microsoft SQL Server?</strong></p>
+
+<p>The Windows Authentication option</p>
+
+<p>The SQL Server Authentication option</p>
+
+<p><strong>23. What are the parameters that control most of connection pooling behaviors?</strong></p>
+
+<p>Connect Timeout</p>
+
+<p>Max Pool Size</p>
+
+<p>Min Pool Size</p>
+
+<p>Pooling</p>
+
+<p><strong>24. What is AutoPostBack?</strong></p>
+
+<p>If you want a control to postback automatically when an event is raised, you need to set the AutoPostBack property of the control to True.</p>
+
+  </div><a class="u-url" href="/2020/12/23/Interview-Notes-Dotnet-2.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An blog for the beginners in Information Technology.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ssanjeevi" title="ssanjeevi"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interview Notes Dotnet | LKGforIT</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Interview Notes Dotnet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="1.What is .NET?" />
+<meta property="og:description" content="1.What is .NET?" />
+<link rel="canonical" href="https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet.html" />
+<meta property="og:url" content="https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet.html" />
+<meta property="og:site_name" content="LKGforIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-23T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"1.What is .NET?","url":"https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkgforit.com/2020/12/23/Interview-Notes-Dotnet.html"},"headline":"Interview Notes Dotnet","dateModified":"2020-12-23T00:00:00-06:00","datePublished":"2020-12-23T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lkgforit.com/feed.xml" title="LKGforIT" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','G-7LPPM0LXN7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LKGforIT</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Us</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Interview Notes Dotnet</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-23T00:00:00-06:00" itemprop="datePublished">
+        Dec 23, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>1.What is .NET?</strong></p>
+
+<p>NET is an integral part of many applications running on Windows and provides common functionality for those applications to run. This download is for people who need .NET to run an application on their computer. For developers, the .NET Framework provides a comprehensive and consistent programming model for building applications that have visually stunning user experiences and seamless and secure communication.</p>
+
+<p><strong>2.How many languages .NET is supporting now?</strong></p>
+
+<p>When .NET was introduced it came with several languages.</p>
+
+<p><a href="http://vb.net/">VB.NET</a>,</p>
+
+<p>C#,</p>
+
+<p>COBOL</p>
+
+<p>and</p>
+
+<p>Perl, etc.</p>
+
+<p><strong>What is the difference between Response.Redirect and Server.Transfer?</strong></p>
+
+<p>Response.Redirect basically redirects the user’s browser to another page or site. The history of the user’s browser is updated to reflect the new address as well. It also performs a trip back to the client where the client’s browser is redirected to the new page.</p>
+
+<p>Whereas, Server.Transfer transfers from one page to the other without making any round-trip back to the client’s browser. The history does not get updated in the case of Server.Transfer.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Class</strong></th>
+      <th><strong>Object</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Class is the definition of an object</td>
+      <td>An object is an instance of a class.</td>
+    </tr>
+    <tr>
+      <td>It is a template of the object</td>
+      <td>A class does not become an object unless instantiated</td>
+    </tr>
+    <tr>
+      <td>It describes all the methods, properties, etc</td>
+      <td>An object is used to access all those properties from the class.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>what do you know about boxing and unboxing?</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Boxing</strong></th>
+      <th><strong>Unboxing</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Implicit</td>
+      <td>Explicit</td>
+    </tr>
+    <tr>
+      <td>Converting a value type to the type object</td>
+      <td>Extracting the value type from the object</td>
+    </tr>
+    <tr>
+      <td>eg : obj myObject = i;</td>
+      <td>eg : i = (int)myObject;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Differentiate between constants and read-only variables.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Constants</strong></th>
+      <th><strong>Read-only Variables</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Evaluated at compile time</td>
+      <td>Evaluated at run-time</td>
+    </tr>
+    <tr>
+      <td>Support only value type variables</td>
+      <td>They can hold the reference type variables</td>
+    </tr>
+    <tr>
+      <td>They are used when the value is not changing at compile time</td>
+      <td>Used when the actual value is unknown before the run-time</td>
+    </tr>
+    <tr>
+      <td>Cannot be initialized at the time of declaration or in a constructor</td>
+      <td>Can be initialized at the time of declaration or in a constructor</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>From which base class all web Forms are inherited?</strong></p>
+
+<p>All web forms are inherited from <strong>page class</strong>.</p>
+
+<p><strong>What are the different types of constructors in c#?</strong></p>
+
+<p>Following are the types of constructors in C#:</p>
+
+<ul>
+  <li>
+    <p>Default Constructor</p>
+  </li>
+  <li>
+    <p>Parameterized constructor</p>
+  </li>
+  <li>
+    <p>Copy Constructor</p>
+  </li>
+  <li>
+    <p> <strong>public</strong> <strong>class</strong> Employee  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>       <strong>public</strong> string firstName;  </p>
+  </li>
+  <li>
+    <p>       <strong>public</strong> string lastName;  </p>
+  </li>
+  <li>
+    <p>       <strong>public</strong> string position;  </p>
+  </li>
+  <li>
+    <p>       <strong>public</strong> int salary;  </p>
+  </li>
+  <li>
+    <p>        <strong>public</strong> Employee()  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>                  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>        // Copy constructor.  </p>
+  </li>
+  <li>
+    <p>        <strong>public</strong> Employee(Employee employee)  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            firstName = employee.firstName;  </p>
+  </li>
+  <li>
+    <p>            lastName  = employee.lastName;  </p>
+  </li>
+  <li>
+    <p>            position  = employee.position;  </p>
+  </li>
+  <li>
+    <p>            salary    = employee.salary;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>Static Constructor</p>
+  </li>
+</ul>
+
+<p><strong>Characteristic of static constructor</strong></p>
+
+<ol>
+  <li>
+    <p>A static constructor does not take any access modifiers.</p>
+  </li>
+  <li>
+    <p>A static constructor does not have a parameter.</p>
+  </li>
+  <li>
+    <p>A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.</p>
+  </li>
+  <li>
+    <p>A static constructor cannot be called directly.</p>
+  </li>
+  <li>
+    <p>The user has no control over when the static constructor is executed in the program.</p>
+  </li>
+  <li>
+    <p>A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</p>
+  </li>
+  <li>
+    <p>A class can have only one static constructor.</p>
+  </li>
+  <li>
+    <p>It can access only static members of a class.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ul>
+  <li>Private Constructor</li>
+</ul>
+
+<p>A private constructor is a special instance constructor. It is generally used in classes that contain static members only. If a class has one or more private constructors and no public constructors, other classes (except nested classes) cannot create instances of this class. The use of private constructor is to serve singleton classes. A singleton class is one which limits the number of objects created to one. Using private constructor we can ensure that no more than one object can be created at a time</p>
+
+<ul>
+  <li>
+    <p>One use of private constructor is when we have the only static member.</p>
+  </li>
+  <li>
+    <p>It provides the implementation of singleton class pattern.</p>
+  </li>
+  <li>
+    <p>Once we provide constructor (private/public/any) the compiler will not add the no parameter public constructor to any class.</p>
+  </li>
+</ul>
+
+<p><strong>use of static constructor. Why and when would we create a static constructor and is it possible to overload one?</strong></p>
+
+<p>No you can’t overload it; a static constructor is useful for initializing any static fields associated with a type (or any other per-type operations) - useful in particular for reading required configuration data into readonly fields, etc.</p>
+
+<p>It is run automatically by the runtime the first time it is needed (the exact rules there are complicated (see “beforefieldinit”) and changed subtly between CLR2 and CLR4). Unless you abuse reflection, it is guaranteed to run <em>at most</em> once (even if two threads arrive at the same time).</p>
+
+<p><strong>List the events in the page life cycle.</strong></p>
+
+<p>Following are the events in the page life cycle:</p>
+
+<ul>
+  <li>
+    <p>Page_PreInit</p>
+  </li>
+  <li>
+    <p>Page_Init</p>
+  </li>
+  <li>
+    <p>Page_InitComplete</p>
+  </li>
+  <li>
+    <p>Page_PreLoad</p>
+  </li>
+  <li>
+    <p>Page_Load</p>
+  </li>
+  <li>
+    <p>Page_LoadComplete</p>
+  </li>
+  <li>
+    <p>Page_PreRender</p>
+  </li>
+  <li>
+    <p>Render</p>
+  </li>
+  <li>
+    <p><strong>What is the code to send an email from an ASP.NET application?</strong></p>
+  </li>
+</ul>
+
+<table>
+<tbody>
+<tr class="odd">
+<td><p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p></td>
+<td><p>mail message = new mail();</p>
+<p>message.From = "abc@gmail.com";</p>
+<p>message.To = "xyz@gmail.com";</p>
+<p>message.Subject = "Test";</p>
+<p>message.Body = "hello";</p>
+<p> </p>
+<p>SmtpMail.SmtpServer = "localhost";</p>
+<p>SmtpMail.Send(message);</p></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>What is cross-page posting?</strong></p>
+
+<p>Whenever we click on a submit button on a page, the data is stored on the same page. But if the data is stored on a different page, it is known as a cross-page posting.</p>
+
+<p>Cross-page posting can be achieved by POSTBACKURL property which causes the postback.</p>
+
+<p>FindControl method can be used to get the values that are posted on this page to which the page has been posted.</p>
+
+<p><strong>What are the different types of cookies in ASP.NET?</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Session Cookie: </strong>It resides on the client machine for a single session until the user logs out.</p>
+  </li>
+  <li>
+    <p><strong>Persistent Cookie: </strong>Resides on the user machine for a period specified for its expiry. It may be an hour, a month or never.</p>
+  </li>
+</ul>
+
+<p><strong>What is the difference between ExecuteScalar and ExecuteNonQuery?</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>ExecuteScalar</strong></th>
+      <th><strong>ExecuteNonQuery</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Returns the output value</td>
+      <td>Does not return any value</td>
+    </tr>
+    <tr>
+      <td>Used for fetching a single value</td>
+      <td>Used to execute insert and update statements</td>
+    </tr>
+    <tr>
+      <td>Does not return the number of affected rows</td>
+      <td>Returns the number of affected rows.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>What is the difference between a stack and a heap?</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Stack</strong></th>
+      <th><strong>Heap</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stored value type</td>
+      <td>Stored reference type</td>
+    </tr>
+    <tr>
+      <td>A stack is responsible for keeping track of each executing thread and its location.</td>
+      <td>The heap is responsible for keeping track of the more precise objects or data.</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div><a class="u-url" href="/2020/12/23/Interview-Notes-Dotnet.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An blog for the beginners in Information Technology.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ssanjeevi" title="ssanjeevi"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

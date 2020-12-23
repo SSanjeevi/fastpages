@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Design Patterns Interview Notes | LKGforIT</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Design Patterns Interview Notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design Patterns:" />
+<meta property="og:description" content="Design Patterns:" />
+<link rel="canonical" href="https://lkgforit.com/2020/12/23/Design-Patterns-Interview-Notes.html" />
+<meta property="og:url" content="https://lkgforit.com/2020/12/23/Design-Patterns-Interview-Notes.html" />
+<meta property="og:site_name" content="LKGforIT" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-23T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Design Patterns:","url":"https://lkgforit.com/2020/12/23/Design-Patterns-Interview-Notes.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkgforit.com/2020/12/23/Design-Patterns-Interview-Notes.html"},"headline":"Design Patterns Interview Notes","dateModified":"2020-12-23T00:00:00-06:00","datePublished":"2020-12-23T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://lkgforit.com/feed.xml" title="LKGforIT" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','G-7LPPM0LXN7','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">LKGforIT</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Us</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Design Patterns Interview Notes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-23T00:00:00-06:00" itemprop="datePublished">
+        Dec 23, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      18 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ol>
+  <li><strong>Design Patterns:</strong></li>
+</ol>
+
+<blockquote>
+  <p>Definition: - design patterns are time tested solution for architecture problems, time tested practices of OOP</p>
+
+  <p>Understandable – it helps people learn object-oriented thinking in much better manner.</p>
+</blockquote>
+
+<h2 id="gof-design-patterns">GOF Design Patterns</h2>
+
+<p>The 23 Design patterns are defined by the Gang of Four programmers. These 23 patterns are divided into three groups depending on the nature of the design problem they intend to solve.</p>
+
+<h2 id="creational-design-patterns">Creational Design Patterns</h2>
+
+<blockquote>
+  <p>These patterns deal with the process of objects creation in such a way that they can be decoupled from their implementing system. This provides more flexibility in deciding which objects need to be created for a given use case/ scenario. There are as follows:</p>
+</blockquote>
+
+<ol>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/factory-method-design-pattern-dotnet">Factory Method</a> : Create instances of derived classes</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/abstract-factory-design-pattern-dotnet">Abstract Factory </a>: Create instances of several classes belonging to different families</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/builder-design-pattern-dotnet">Builder</a> : Separates an object construction from its representation</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/prototype-design-pattern-dotnet">Prototype</a> : Create a duplicate object or clone of the object</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/singleton-design-pattern-dotnet">Singleton</a> : Ensures that a class can have only one instance</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h2 id="structural-design-patterns">Structural Design Patterns</h2>
+
+<blockquote>
+  <p>These patterns deal with the composition of objects structures. The concept of inheritance is used to compose interfaces and define various ways to compose objects for obtaining new functionalities. There are as follows:</p>
+</blockquote>
+
+<ol>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/adapter-design-pattern-dotnet">Adapter</a> : Match interfaces of different classes</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/bridge-design-pattern-dotnet">Bridge</a> : Separates an object’s abstraction from its implementation</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/composite-design-pattern-dotnet">Composite</a> : A tree structure of simple and composite objects</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/mvc/file-upload-with-strongly-typed-view-and-model-validation">Decorator</a> : Add responsibilities to objects dynamically</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/facade-design-pattern-dotnet">Façade</a> : A single class that represents an entire complex system</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/flyweight-design-pattern-dotnet">Flyweight</a> : Minimize memory usage by sharing as much data as possible with similar objects</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/proxy-design-pattern-dotnet">Proxy</a> : Provides a surrogate object, which references to other object</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h2 id="behavioral-design-patterns">Behavioral Design Patterns</h2>
+
+<blockquote>
+  <p>These patterns deal with the process of communication, managing relationships, and responsibilities between objects. There are as follows:</p>
+</blockquote>
+
+<ol>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/chain-of-responsibility-design-pattern-dotnet">Chain of Responsibility</a>: Passes a request among a list or chain of objects.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/command-design-pattern-dotnet">Command</a>: Wraps a request under an object as a command and passed to invoker object.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/interpreter-design-pattern-c-sharp">Interpreter</a>: Implements an expression interface to interpret a particular context.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/iterator-design-pattern-c-sharp">Iterator</a>: Provides a way to access the elements of a collection object in sequential manner without knowing its underlying structure.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/mediator-design-pattern-c-sharp">Mediator</a>: Allows multiple objects to communicate with each other’s without knowing each other’s structure.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/memento-design-pattern-c-sharp">Memento</a>: Capture the current state of an object and store it in such a manner that it can be restored at a later time without breaking the rules of encapsulation.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/observer-design-pattern-c-sharp">Observer</a>: Allows an object (subject) to publish changes to its state and other objects (observer) that depend upon that object are automatically notified of any changes to the subject’s state.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/state-design-pattern-c-sharp">State</a>: Alters the behavior of an object when it’s internal state changes.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/strategy-design-pattern-c-sharp">Strategy</a>: Allows a client to choose an algorithm from a family of algorithms at run-time and gives it a simple way to access it.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/visitor-design-pattern-c-sharp">Visitor</a>: Creates and performs new operations onto a set of objects without changing the object structure or classes.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><a href="http://www.dotnettricks.com/learn/designpatterns/template-method-design-pattern-c-sharp">Template Method</a>: Defines the basic steps of an algorithm and allow the implementation of the individual steps to be changed.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>OOP Phase</strong></th>
+      <th><strong>Design pattern category</strong></th>
+      <th><strong>Example</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Template/class creation problem</td>
+      <td>Structural design pattern</td>
+      <td>Structural design patterns are Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Private Class Data, and Proxy.</td>
+    </tr>
+    <tr>
+      <td>Instantiation problems</td>
+      <td>Creational design pattern</td>
+      <td>Creational design patterns are the Factory Method, Abstract Factory, Builder, Singleton, Object Pool, and Prototype.</td>
+    </tr>
+    <tr>
+      <td>Runtime problems</td>
+      <td>Behavioral design pattern</td>
+      <td>Behavioral patterns are Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null Object, Observer, State, Strategy, Template method, Visitor</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Class new instance – use it</p>
+
+  <p>Polymorphism – fundamental thing to achieve decoupling.</p>
+
+  <p>Simple Factory pattern – it helps centralize object creation and thus decoupling achieved – don’t use direct obj creation in app</p>
+
+  <p>RIP – Replace IF with polymorphism - enum of customer type based on input type input in string return obj of customer</p>
+
+  <p>Lazy loading pattern – load objects on demand</p>
+</blockquote>
+
+<ol>
+  <li>Differences:</li>
+</ol>
+
+<!-- end list -->
+
+<ul>
+  <li>
+    <p>Design pattern – code or pseudo code - eg.: Factory, iterator, singleton</p>
+  </li>
+  <li>
+    <p>Architecture pattern – block diagrams – view of diagram – eg.: MVC, MVP, MVVM</p>
+  </li>
+  <li>
+    <p>Architecture style – principles – eg.: REST(representational state transfer – http protocol crud operations), SOA(service oriented architctr)</p>
+
+    <ol>
+      <li>Differences:</li>
+    </ol>
+  </li>
+  <li>
+    <p>Design pattern – code or pseudo code</p>
+
+    <ol>
+      <li><strong>Unity:</strong></li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Inversion of Control (IoC)</strong> is a design principle (although, some people refer to it as a pattern). As the name suggests, it is used to invert different kinds of controls in object-oriented design to achieve loose coupling. Here, controls refer to any additional responsibilities a class has, other than its main responsibility. This include control over the flow of an application, and control over the flow of an object creation or dependent object creation and binding.</p>
+</blockquote>
+
+<ol>
+  <li>Dependency Injection (DI) is a design pattern used to implement IoC.</li>
+</ol>
+
+<p>Constructor Injection: In the constructor injection, the injector supplies the service (dependency) through the client class constructor.</p>
+
+<p>public CustomerBusinessLogic(ICustomerDataAccess custDataAccess)</p>
+
+<p>{</p>
+
+<p>_dataAccess = custDataAccess;</p>
+
+<p>}</p>
+
+<ol>
+  <li>Property Injection: In the property injection (aka the Setter Injection), the injector supplies the dependency through a public property of the client class.</li>
+</ol>
+
+<p>public ICustomerDataAccess DataAccess { get; set; }</p>
+
+<ol>
+  <li>Method Injection: In this type of injection, the client class implements an interface which declares the method(s) to supply the dependency and the injector uses this interface to supply the dependency to the client class.</li>
+</ol>
+
+<p>public void SetDependency(ICustomerDataAccess customerDataAccess)</p>
+
+<p>{</p>
+
+<p>_dataAccess = customerDataAccess;</p>
+
+<p>}</p>
+
+<h1 id="factory-method-design-pattern"><strong>Factory Method Design Pattern</strong></h1>
+
+<p>The factory design pattern in C# is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time. In this article, you will learn how to implement Factory Method Design Pattern In C# and .NET.</p>
+
+<p>UML Class Diagram<br />
+<img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image1.png" alt="UML Class Diagram" /></p>
+
+<p>The classes and objects participating in the above UML class diagram are as follows:</p>
+
+<p> </p>
+
+<ol>
+  <li><em>Product</em><br />
+This defines the interface of objects the factory method creates</li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li><em>ConcreteProduct</em><br />
+This is a class which implements the Product interface.</li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li><em>Creator</em><br />
+This is an abstract class and declares the factory method, which returns an object of type Product.</li>
+</ol>
+
+<blockquote>
+  <p>This may also define a default implementation of the factory method that returns a default ConcreteProduct object.</p>
+
+  <p>This may call the factory method to create a Product object.</p>
+</blockquote>
+
+<ol>
+  <li><em>ConcreteCreator</em><br />
+This is a class which implements the Creator class and overrides the factory method to return an instance of a ConcreteProduct.</li>
+</ol>
+
+<h3 id="who-is-what"> <strong>Who is what?</strong></h3>
+
+<p>The classes and objects participating in the above class diagram can be identified as follows:</p>
+
+<ol>
+  <li>
+    <p>Product - CreditCard</p>
+  </li>
+  <li>
+    <p>ConcreteProduct- MoneyBackCreditCard, TitaniumCreditCard, PlatinumCreditCard</p>
+  </li>
+  <li>
+    <p>Creator- CardFactory</p>
+  </li>
+  <li>
+    <p>ConcreteCreator- MoneyBackCardFactory, TitaniumCardFactory, PlatinumCardFactory</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p>using System;  </p>
+  </li>
+  <li>
+    <p>  </p>
+  </li>
+  <li>
+    <p>namespace FactoryMethodDesignPatternInCSharp  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    /// &lt;summary&gt;  </p>
+  </li>
+  <li>
+    <p>    /// Factory Pattern Demo  </p>
+  </li>
+  <li>
+    <p>    /// &lt;/summary&gt;    </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>class</strong> ClientApplication  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>static</strong> <strong>void</strong> Main()  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            CardFactory factory = <strong>null</strong>;  </p>
+  </li>
+  <li>
+    <p>            Console.Write(“Enter the card type you would like to visit: ”);  </p>
+  </li>
+  <li>
+    <p>            string car = Console.ReadLine();  </p>
+  </li>
+  <li>
+    <p>  </p>
+  </li>
+  <li>
+    <p>            <strong>switch</strong> (car.ToLower())  </p>
+  </li>
+  <li>
+    <p>            {  </p>
+  </li>
+  <li>
+    <p>                <strong>case</strong> ”moneyback”:  </p>
+  </li>
+  <li>
+    <p>                    factory = <strong>new</strong> MoneyBackFactory(50000, 0);  </p>
+  </li>
+  <li>
+    <p>                    <strong>break</strong>;  </p>
+  </li>
+  <li>
+    <p>                <strong>case</strong> ”titanium”:  </p>
+  </li>
+  <li>
+    <p>                    factory = <strong>new</strong> TitaniumFactory(100000, 500);  </p>
+  </li>
+  <li>
+    <p>                    <strong>break</strong>;  </p>
+  </li>
+  <li>
+    <p>                <strong>case</strong> ”platinum”:  </p>
+  </li>
+  <li>
+    <p>                    factory = <strong>new</strong> PlatinumFactory(500000, 1000);  </p>
+  </li>
+  <li>
+    <p>                    <strong>break</strong>;  </p>
+  </li>
+  <li>
+    <p>                <strong>default</strong>:  </p>
+  </li>
+  <li>
+    <p>                    <strong>break</strong>;  </p>
+  </li>
+  <li>
+    <p>            }  </p>
+  </li>
+  <li>
+    <p>  </p>
+  </li>
+  <li>
+    <p>            CreditCard creditCard = factory.GetCreditCard();  </p>
+  </li>
+  <li>
+    <p>            Console.WriteLine(“\nYour card details are below : \n”);  </p>
+  </li>
+  <li>
+    <p>            Console.WriteLine(“Card Type: {0}\nCredit Limit: {1}\nAnnual Charge: {2}”,  </p>
+  </li>
+  <li>
+    <p>                creditCard.CardType, creditCard.CreditLimit, creditCard.AnnualCharge);  </p>
+  </li>
+  <li>
+    <p>            Console.ReadKey();  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+</ol>
+
+<p><strong>public class AirConditioner</strong></p>
+
+<p><strong>{</strong></p>
+
+<p><strong>private readonly Dictionary&lt;Actions, AirConditionerFactory&gt; _factories;</strong></p>
+
+<p><strong>public AirConditioner()</strong></p>
+
+<p><strong>{</strong></p>
+
+<p><strong>_factories = new Dictionary&lt;Actions, AirConditionerFactory&gt;();</strong></p>
+
+<p><strong>foreach (Actions action in Enum.GetValues(typeof(Actions)))</strong></p>
+
+<p><strong>{</strong></p>
+
+<p><strong>var factory = (AirConditionerFactory)Activator.CreateInstance(Type.GetType(“FactoryMethod.” + Enum.GetName(typeof(Actions), action) + “Factory”));</strong></p>
+
+<p><strong>_factories.Add(action, factory);</strong></p>
+
+<p><strong>}</strong></p>
+
+<p><strong>}</strong></p>
+
+<p><strong>}</strong></p>
+
+<h1 id="abstract-factory-design-pattern"><strong>Abstract Factory Design Pattern</strong></h1>
+
+<ul>
+  <li>Under Creational Pattern</li>
+</ul>
+
+<blockquote>
+  <p><strong>Abstract Factory</strong> use Factory design pattern for creating objects. It may also use Builder design pattern and prototype design pattern for creating objects. It completely depends upon your implementation for creating objects. </p>
+</blockquote>
+
+<p>Abstract Factory patterns act a super-factory which creates other factories. This pattern is also called a Factory of factories. In Abstract Factory pattern an interface is responsible for creating a set of related objects, or dependent objects without specifying their concrete classes.</p>
+
+<p><img src="https://lkgforit.com/assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image2.png" alt="" /></p>
+
+<p>The classes, interfaces, and objects in the above UML class diagram are as follows:</p>
+
+<h3 id="abstractfactory"><strong>AbstractFactory</strong></h3>
+
+<blockquote>
+  <p>This is an interface which is used to create abstract product</p>
+</blockquote>
+
+<h3 id="concretefactory"><strong>ConcreteFactory</strong></h3>
+
+<blockquote>
+  <p>This is a class which implements the AbstractFactory interface to create concrete products.</p>
+</blockquote>
+
+<h3 id="abstractproduct"><strong>AbstractProduct</strong></h3>
+
+<blockquote>
+  <p>This is an interface which declares a type of product.</p>
+</blockquote>
+
+<h3 id="concreteproduct"><strong>ConcreteProduct</strong></h3>
+
+<blockquote>
+  <p>This is a class which implements the AbstractProduct interface to create a product.</p>
+</blockquote>
+
+<h3 id="client"><strong>Client</strong></h3>
+
+<blockquote>
+  <p>This is a class which uses AbstractFactory and AbstractProduct interfaces to create a family of related objects.</p>
+</blockquote>
+
+<p>public interface AbstractFactory</p>
+
+<p>{</p>
+
+<p>AbstractProductA CreateProductA();</p>
+
+<p>AbstractProductB CreateProductB();</p>
+
+<p>}</p>
+
+<p>public class ConcreteFactoryA : AbstractFactory</p>
+
+<p>{</p>
+
+<p>public AbstractProductA CreateProductA()</p>
+
+<p>{</p>
+
+<p>return new ProductA1();</p>
+
+<p>}</p>
+
+<p>public AbstractProductB CreateProductB()</p>
+
+<p>{</p>
+
+<p>return new ProductB1();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>public class ConcreteFactoryB : AbstractFactory</p>
+
+<p>{</p>
+
+<p>public AbstractProductA CreateProductA()</p>
+
+<p>{</p>
+
+<p>return new ProductA2();</p>
+
+<p>}</p>
+
+<p>public AbstractProductB CreateProductB()</p>
+
+<p>{</p>
+
+<p>return new ProductB2();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>public interface AbstractProductA { }</p>
+
+<p>public class ProductA1 : AbstractProductA { }</p>
+
+<p>public class ProductA2 : AbstractProductA { }</p>
+
+<p>public interface AbstractProductB { }</p>
+
+<p>public class ProductB1 : AbstractProductB { }</p>
+
+<p>public class ProductB2 : AbstractProductB { }</p>
+
+<p>public class Client</p>
+
+<p>{</p>
+
+<p>private AbstractProductA _productA;</p>
+
+<p>private AbstractProductB _productB;</p>
+
+<p>public Client(AbstractFactory factory)</p>
+
+<p>{</p>
+
+<p>_productA = factory.CreateProductA();</p>
+
+<p>_productB = factory.CreateProductB();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>The classes, interfaces, and objects in the above class diagram can be identified as follows:</p>
+
+<ol>
+  <li>
+    <blockquote>
+      <p><strong>VehicleFactory</strong> - AbstractFactory interface</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>HondaFactory &amp; HeroFactory</strong>- Concrete Factories</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Bike &amp; Scooter </strong>- AbstractProduct interface</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Regular Bike, Sports Bike, Regular Scooter &amp; Scooty </strong>- Concrete Products</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>VehicleClient </strong>- Client</p>
+    </blockquote>
+  </li>
+</ol>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// Abstract Factory Pattern Demo</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>class Program</p>
+
+<p>{</p>
+
+<p>static void Main(string[] args)</p>
+
+<p>{</p>
+
+<p>VehicleFactory honda = new HondaFactory();</p>
+
+<p>VehicleClient hondaclient = new VehicleClient(honda, “Regular”);</p>
+
+<p>Console.WriteLine(“******* Honda **********”);</p>
+
+<p>Console.WriteLine(hondaclient.GetBikeName());</p>
+
+<p>Console.WriteLine(hondaclient.GetScooterName());</p>
+
+<p>hondaclient = new VehicleClient(honda, “Sports”);</p>
+
+<p>Console.WriteLine(hondaclient.GetBikeName());</p>
+
+<p>Console.WriteLine(hondaclient.GetScooterName());</p>
+
+<p>VehicleFactory hero = new HeroFactory();</p>
+
+<p>VehicleClient heroclient = new VehicleClient(hero, “Regular”);</p>
+
+<p>Console.WriteLine(“******* Hero **********”);</p>
+
+<p>Console.WriteLine(heroclient.GetBikeName());</p>
+
+<p>Console.WriteLine(heroclient.GetScooterName());</p>
+
+<p>heroclient = new VehicleClient(hero, “Sports”);</p>
+
+<p>Console.WriteLine(heroclient.GetBikeName());</p>
+
+<p>Console.WriteLine(heroclient.GetScooterName());</p>
+
+<p>Console.ReadKey();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>#</p>
+
+<h1 id="builder-design-pattern"><strong>Builder Design Pattern</strong></h1>
+
+<p><strong>Builder pattern</strong> builds a complex object by using a step by step approach. Builder interface defines the steps to build the final object. This builder is independent of the objects creation process. A class that is known as Director, controls the object creation process.</p>
+
+<p>Moreover, <strong>builder pattern</strong> describes a way to separate an object from its construction. The same construction method can create a different representation of the object.</p>
+
+<p><img src="https://lkgforit.com/assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image3.png" alt="" /></p>
+
+<p>The classes, interfaces, and objects in the above UML class diagram are as follows:</p>
+
+<h3 id="builder"><strong>Builder</strong></h3>
+
+<blockquote>
+  <p>This is an interface which is used to define all the steps to create a product</p>
+</blockquote>
+
+<h3 id="concretebuilder"><strong>ConcreteBuilder</strong></h3>
+
+<blockquote>
+  <p>This is a class which implements the Builder interface to create a complex product.</p>
+</blockquote>
+
+<h3 id="product"><strong>Product</strong></h3>
+
+<blockquote>
+  <p>This is a class which defines the parts of the complex object which are to be generated by the builder pattern.</p>
+</blockquote>
+
+<h3 id="director"><strong>Director</strong></h3>
+
+<blockquote>
+  <p>This is a class which is used to construct an object using the Builder interface.</p>
+</blockquote>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// The ‘Builder’ interface</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>public interface IVehicleBuilder</p>
+
+<p>{</p>
+
+<p>void SetModel();</p>
+
+<p>void SetEngine();</p>
+
+<p>void SetTransmission();</p>
+
+<p>void SetBody();</p>
+
+<p>void SetAccessories();</p>
+
+<p>Vehicle GetVehicle();</p>
+
+<p>}</p>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// The ‘ConcreteBuilder1’ class</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>public class HeroBuilder : IVehicleBuilder</p>
+
+<p>{</p>
+
+<p>Vehicle objVehicle = new Vehicle();</p>
+
+<p>public void SetModel()</p>
+
+<p>{</p>
+
+<p>objVehicle.Model = “Hero”;</p>
+
+<p>}</p>
+
+<p>public void SetEngine()</p>
+
+<p>{</p>
+
+<p>objVehicle.Engine = “4 Stroke”;</p>
+
+<p>}</p>
+
+<p>public void SetTransmission()</p>
+
+<p>{</p>
+
+<p>objVehicle.Transmission = “120 km/hr”;</p>
+
+<p>}</p>
+
+<p>public void SetBody()</p>
+
+<p>{</p>
+
+<p>objVehicle.Body = “Plastic”;</p>
+
+<p>}</p>
+
+<p>public void SetAccessories()</p>
+
+<p>{</p>
+
+<p>objVehicle.Accessories.Add(“Seat Cover”);</p>
+
+<p>objVehicle.Accessories.Add(“Rear Mirror”);</p>
+
+<p>}</p>
+
+<p>public Vehicle GetVehicle()</p>
+
+<p>{</p>
+
+<p>return objVehicle;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// The ‘ConcreteBuilder2’ class</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>public class HondaBuilder : IVehicleBuilder</p>
+
+<p>{</p>
+
+<p>Vehicle objVehicle = new Vehicle();</p>
+
+<p>public void SetModel()</p>
+
+<p>{</p>
+
+<p>objVehicle.Model = “Honda”;</p>
+
+<p>}</p>
+
+<p>public void SetEngine()</p>
+
+<p>{</p>
+
+<p>objVehicle.Engine = “4 Stroke”;</p>
+
+<p>}</p>
+
+<p>public void SetTransmission()</p>
+
+<p>{</p>
+
+<p>objVehicle.Transmission = “125 Km/hr”;</p>
+
+<p>}</p>
+
+<p>public void SetBody()</p>
+
+<p>{</p>
+
+<p>objVehicle.Body = “Plastic”;</p>
+
+<p>}</p>
+
+<p>public void SetAccessories()</p>
+
+<p>{</p>
+
+<p>objVehicle.Accessories.Add(“Seat Cover”);</p>
+
+<p>objVehicle.Accessories.Add(“Rear Mirror”);</p>
+
+<p>objVehicle.Accessories.Add(“Helmet”);</p>
+
+<p>}</p>
+
+<p>public Vehicle GetVehicle()</p>
+
+<p>{</p>
+
+<p>return objVehicle;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// The ‘Product’ class</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>public class Vehicle</p>
+
+<p>{</p>
+
+<p>public string Model { get; set; }</p>
+
+<p>public string Engine { get; set; }</p>
+
+<p>public string Transmission { get; set; }</p>
+
+<p>public string Body { get; set; }</p>
+
+<p>public List&lt;string&gt; Accessories { get; set; }</p>
+
+<p>public Vehicle()</p>
+
+<p>{</p>
+
+<p>Accessories = new List&lt;string&gt;();</p>
+
+<p>}</p>
+
+<p>public void ShowInfo()</p>
+
+<p>{</p>
+
+<p>Console.WriteLine(“Model: {0}”, Model);</p>
+
+<p>Console.WriteLine(“Engine: {0}”, Engine);</p>
+
+<p>Console.WriteLine(“Body: {0}”, Body);</p>
+
+<p>Console.WriteLine(“Transmission: {0}”, Transmission);</p>
+
+<p>Console.WriteLine(“Accessories:”);</p>
+
+<p>foreach (var accessory in Accessories)</p>
+
+<p>{</p>
+
+<p>Console.WriteLine(“\t{0}”, accessory);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// The ‘Director’ class</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>public class VehicleCreator</p>
+
+<p>{</p>
+
+<p>private readonly IVehicleBuilder objBuilder;</p>
+
+<p>public VehicleCreator(IVehicleBuilder builder)</p>
+
+<p>{</p>
+
+<p>objBuilder = builder;</p>
+
+<p>}</p>
+
+<p>public void CreateVehicle()</p>
+
+<p>{</p>
+
+<p>objBuilder.SetModel();</p>
+
+<p>objBuilder.SetEngine();</p>
+
+<p>objBuilder.SetBody();</p>
+
+<p>objBuilder.SetTransmission();</p>
+
+<p>objBuilder.SetAccessories();</p>
+
+<p>}</p>
+
+<p>public Vehicle GetVehicle()</p>
+
+<p>{</p>
+
+<p>return objBuilder.GetVehicle();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>/// &lt;summary&gt;</p>
+
+<p>/// Builder Design Pattern Demo</p>
+
+<p>/// &lt;/summary&gt;</p>
+
+<p>class Program</p>
+
+<p>{</p>
+
+<p>static void Main(string[] args)</p>
+
+<p>{</p>
+
+<p>var vehicleCreator = new VehicleCreator(new HeroBuilder());</p>
+
+<p>vehicleCreator.CreateVehicle();</p>
+
+<p>var vehicle = vehicleCreator.GetVehicle();</p>
+
+<p>vehicle.ShowInfo();</p>
+
+<p>Console.WriteLine(“———————————————”);</p>
+
+<p>vehicleCreator = new VehicleCreator(new HondaBuilder());</p>
+
+<p>vehicleCreator.CreateVehicle();</p>
+
+<p>vehicle = vehicleCreator.GetVehicle();</p>
+
+<p>vehicle.ShowInfo();</p>
+
+<p>Console.ReadKey();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<h1 id="repository-pattern"><strong>Repository Pattern</strong></h1>
+
+<p>the repository pattern can be implemented, to separate the layers. Our purpose will be to separate the controller and the data access layer (database context) using an intermediate layer, in other words repository layer, for communication between the two.</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image4.jpeg" alt="Respository and database context" /></p>
+
+<p>A generic repository is a generic class, with basic CRUD methods in it (and of course other methods can be added as needed). This class and its member functions can be used for any entity of the database. This means, if we have entities Customers and Orders, this single generic class can be used for both of them.</p>
+
+<p>.</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image5.jpeg" alt="repository with our required operations " />:</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image6.jpeg" alt="repository with our required operations code" />:</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image7.jpeg" alt="repository with our required operations code example" /><br />
+And, our controller method to fetch the records will look like the following:</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image8.jpeg" alt="controller method to fetch the records " />:</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image9.jpeg" alt="instance for the entity repository code" /></p>
+
+<h1 id="facade-design-pattern"><strong>Facade Design Pattern</strong></h1>
+
+<p>Facade Pattern is used in hiding complexity of large systems and provide simpler interfaces,</p>
+
+<p>A room is a façade and just by looking at it from outside the door, one can not predict what is inside the room and how the room is structured from inside. Thus, Façade is a general term for simplifying the outward appearance of a complex or large system.Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.</p>
+
+<p>UML diagram,</p>
+
+<p><img src="assets/img/2020-12-23-Design-Patterns-Interview-Notes/media/image10.png" alt="Facade Design Pattern Using C#" /></p>
+
+<p>Customers place their orders just by talking to the operator and they don’t need to bother about how they will prepare the pizza, what all operations will they perform, on what temperature they will cook, etc. </p>
+
+<p>Similarly, in our code sample, we can see that the client is using the restaurant façade class to order pizza and bread of different types without directly interacting with the subclasses.</p>
+
+<p>This is the interface specific to the pizza.</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>interface</strong> IPizza {  </p>
+  </li>
+  <li>
+    <p>    <strong>void</strong> GetVegPizza();  </p>
+  </li>
+  <li>
+    <p>    <strong>void</strong> GetNonVegPizza();  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p>This is a pizza provider class which will get pizza for their clients. Here methods can have other private methods which client is not bothered about.</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>class</strong> PizzaProvider: IPizza {  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetNonVegPizza() {  </p>
+  </li>
+  <li>
+    <p>        GetNonVegToppings();  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Non Veg Pizza.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetVegPizza() {  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Veg Pizza.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>void</strong> GetNonVegToppings() {  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Non Veg Pizza Toppings.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p>Similarly, this is the interface specific for the bread.</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>interface</strong> IBread {  </p>
+  </li>
+  <li>
+    <p>    <strong>void</strong> GetGarlicBread();  </p>
+  </li>
+  <li>
+    <p>    <strong>void</strong> GetCheesyGarlicBread();  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p>And this is a bread provider class.</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>class</strong> BreadProvider: IBread {  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetGarlicBread() {  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Garlic Bread.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetCheesyGarlicBread() {  </p>
+  </li>
+  <li>
+    <p>        GetCheese();  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Cheesy Garlic Bread.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>void</strong> GetCheese() {  </p>
+  </li>
+  <li>
+    <p>        Console.WriteLine(“Getting Cheese.”);  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p>Below is the restaurant façade class, which will be used by the client to order different pizzas or breads.</p>
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>class</strong> RestaurantFacade {  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> IPizza _PizzaProvider;  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> IBread _BreadProvider;  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> RestaurantFacade() {  </p>
+  </li>
+  <li>
+    <p>        _PizzaProvider = <strong>new</strong> PizzaProvider();  </p>
+  </li>
+  <li>
+    <p>        _BreadProvider = <strong>new</strong> BreadProvider();  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetNonVegPizza() {  </p>
+  </li>
+  <li>
+    <p>        _PizzaProvider.GetNonVegPizza();  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetVegPizza() {  </p>
+  </li>
+  <li>
+    <p>        _PizzaProvider.GetVegPizza();  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetGarlicBread() {  </p>
+  </li>
+  <li>
+    <p>        _BreadProvider.GetGarlicBread();  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>void</strong> GetCheesyGarlicBread() {  </p>
+  </li>
+  <li>
+    <p>        _BreadProvider.GetCheesyGarlicBread();  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p>Finally, below is the main method of our program,</p>
+
+<ol>
+  <li>
+    <p><strong>void</strong> Main() {  </p>
+  </li>
+  <li>
+    <p>    Console.WriteLine(“———————-CLIENT ORDERS FOR PIZZA—————————-\n”);  </p>
+  </li>
+  <li>
+    <p>    var facadeForClient = <strong>new</strong> RestaurantFacade();  </p>
+  </li>
+  <li>
+    <p>    facadeForClient.GetNonVegPizza();  </p>
+  </li>
+  <li>
+    <p>    facadeForClient.GetVegPizza();  </p>
+  </li>
+  <li>
+    <p>    Console.WriteLine(“\n———————-CLIENT ORDERS FOR BREAD—————————-\n”);  </p>
+  </li>
+  <li>
+    <p>    facadeForClient.GetGarlicBread();  </p>
+  </li>
+  <li>
+    <p>    facadeForClient.GetCheesyGarlicBread();  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p><strong>WHEN TO USE THIS PATTERN</strong></p>
+
+<p>Use this pattern to simplify the problem when there are multiple complex subsystems and interacting with them individually is really difficult/cumbersome.</p>
+
+<p><strong>REAL LIFE USE CASE – example - Redbus app</strong></p>
+
+<ul>
+  <li>
+    <p>The shopkeeper is a façade for all the items in the shop.</p>
+  </li>
+  <li>
+    <p>Online travel portal is a façade for their customers for different holiday/travel packages.</p>
+  </li>
+  <li>
+    <p>Customer care is a façade for their customers for different services. </p>
+  </li>
+</ul>
+
+<h1 id="singleton-design-pattern"><strong>Singleton Design Pattern</strong></h1>
+
+<ol>
+  <li>
+    <p>Ensures a class has only one instance and provides a global point of access to it.</p>
+  </li>
+  <li>
+    <p>A singleton is a class that only allows a single instance of itself to be created, and usually gives simple access to that instance.</p>
+  </li>
+  <li>
+    <p>Most commonly, singletons don’t allow any parameters to be specified when creating the instance, since a second request of an instance with a different parameter could be problematic! (If the same instance should be accessed for all requests with the same parameter then the factory pattern is more appropriate.)</p>
+  </li>
+</ol>
+
+<p>characteristics of a Singleton Pattern.</p>
+
+<ul>
+  <li>
+    <p>A single constructor, that is private and parameterless.</p>
+  </li>
+  <li>
+    <p>The class is sealed.</p>
+  </li>
+  <li>
+    <p>A static variable that holds a reference to the single created instance, if any.</p>
+  </li>
+  <li>
+    <p>A public static means of getting the reference to the single created instance, creating one if necessary.</p>
+  </li>
+</ul>
+
+<p>Advantages of Singleton Pattern</p>
+
+<p> </p>
+
+<p>The advantages of a Singleton Pattern are:</p>
+
+<ol>
+  <li>
+    <p>Singleton pattern can be implemented interfaces.</p>
+  </li>
+  <li>
+    <p>It can be also inherit from other classes.</p>
+  </li>
+  <li>
+    <p>It can be lazy loaded.</p>
+  </li>
+  <li>
+    <p>It has Static Initialization.</p>
+  </li>
+  <li>
+    <p>It can be extended into a factory pattern.</p>
+  </li>
+  <li>
+    <p>It helps to hide dependencies.</p>
+  </li>
+  <li>
+    <p>It provides a single point of access to a particular instance, so it is easy to maintain.</p>
+  </li>
+</ol>
+
+<p>Singleton class vs. Static methods</p>
+
+<p> </p>
+
+<p>The following conpares Singleton class vs. Static methods:</p>
+
+<ol>
+  <li>
+    <p>A Static Class cannot be extended whereas a singleton class can be extended.</p>
+  </li>
+  <li>
+    <p>A Static Class can still have instances (unwanted instances) whereas a singleton class prevents it.</p>
+  </li>
+  <li>
+    <p>A Static Class cannot be initialized with a STATE (parameter), whereas a singleton class can be.</p>
+  </li>
+  <li>
+    <p>A Static class is loaded automatically by the CLR when the program or namespace containing the class is loaded.</p>
+  </li>
+</ol>
+
+<p>How to Implement Singleton Pattern in your code</p>
+
+<p> </p>
+
+<p>There are many way to implement a Singleton Pattern in C#.</p>
+
+<ol>
+  <li>
+    <p>No Thread Safe Singleton.</p>
+  </li>
+  <li>
+    <p>Thread-Safety Singleton.</p>
+  </li>
+  <li>
+    <p>Thread-Safety Singleton using Double-Check Locking.</p>
+  </li>
+  <li>
+    <p>Thread-Safe Singleton without using locks and no lazy instantiation.</p>
+  </li>
+  <li>
+    <p>Fully lazy instantiation.</p>
+  </li>
+  <li>
+    <p>Using .NET 4’s Lazy&lt;T&gt; type.</p>
+  </li>
+</ol>
+
+<p><strong>1. No Thread Safe Singleton</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>
+    <p>The following code is not thread-safe.</p>
+  </li>
+  <li>
+    <p>Two different threads could both have evaluated the test (if instance == null) and found it to be true, then both creates instances, which violates the singleton pattern.</p>
+  </li>
+  <li>
+    <p>Note that in fact the instance may already have been created before the expression is evaluated, but the memory model doesn’t guarantee that the new value of instance will be seen by other threads unless suitable memory barriers have been passed.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p>// Bad code! Do not use!  </p>
+  </li>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    //Private Constructor.  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> Singleton instance = <strong>null</strong>;  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>if</strong> (instance == <strong>null</strong>)  </p>
+  </li>
+  <li>
+    <p>            {  </p>
+  </li>
+  <li>
+    <p>                instance = <strong>new</strong> Singleton();  </p>
+  </li>
+  <li>
+    <p>            }  </p>
+  </li>
+  <li>
+    <p>            <strong>return</strong> instance;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p><strong>2. Thread Safety Singleton</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>
+    <p>This implementation is thread-safe.</p>
+  </li>
+  <li>
+    <p>In the following code, the thread is locked on a shared object and checks whether an instance has been created or not.</p>
+  </li>
+  <li>
+    <p>This takes care of the memory barrier issue and ensures that only one thread will create an instance.</p>
+  </li>
+  <li>
+    <p>For example: Since only one thread can be in that part of the code at a time, by the time the second thread enters it, the first thread will have created the instance, so the expression will evaluate to false.</p>
+  </li>
+  <li>
+    <p>The biggest problem with this is performance; performance suffers since a lock is required every time an instance is requested.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> <strong>readonly</strong> <strong>object</strong> padlock = <strong>new</strong> <strong>object</strong>();  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> Singleton instance = <strong>null</strong>;  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>lock</strong> (padlock)  </p>
+  </li>
+  <li>
+    <p>            {  </p>
+  </li>
+  <li>
+    <p>                <strong>if</strong> (instance == <strong>null</strong>)  </p>
+  </li>
+  <li>
+    <p>                {  </p>
+  </li>
+  <li>
+    <p>                    instance = <strong>new</strong> Singleton();  </p>
+  </li>
+  <li>
+    <p>                }  </p>
+  </li>
+  <li>
+    <p>                <strong>return</strong> instance;  </p>
+  </li>
+  <li>
+    <p>            }  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p><strong>3. Thread Safety Singleton using Double Check Locking</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>In the following code, the thread is locked on a shared object and checks whether an instance has been created or not with double checking.</li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> <strong>readonly</strong> <strong>object</strong> padlock = <strong>new</strong> <strong>object</strong>();  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> Singleton instance = <strong>null</strong>;  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>if</strong> (instance == <strong>null</strong>)  </p>
+  </li>
+  <li>
+    <p>            {  </p>
+  </li>
+  <li>
+    <p>                <strong>lock</strong> (padlock)  </p>
+  </li>
+  <li>
+    <p>                {  </p>
+  </li>
+  <li>
+    <p>                    <strong>if</strong> (instance == <strong>null</strong>)  </p>
+  </li>
+  <li>
+    <p>                    {  </p>
+  </li>
+  <li>
+    <p>                        instance = <strong>new</strong> Singleton();  </p>
+  </li>
+  <li>
+    <p>                    }  </p>
+  </li>
+  <li>
+    <p>                }  </p>
+  </li>
+  <li>
+    <p>            }  </p>
+  </li>
+  <li>
+    <p>            <strong>return</strong> instance;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}</p>
+  </li>
+</ol>
+
+<p><strong>4. Thread Safe Singleton without using locks and no lazy instantiation</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>
+    <p>The preceding implementation looks like very simple code.</p>
+  </li>
+  <li>
+    <p>This type of implementation has a static constructor, so it executes only once per Application Domain.</p>
+  </li>
+  <li>
+    <p>It is not as lazy as the other implementation.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> <strong>readonly</strong> Singleton instance = <strong>new</strong> Singleton();  </p>
+  </li>
+  <li>
+    <p>    // Explicit static constructor to tell C# compiler  </p>
+  </li>
+  <li>
+    <p>    // not to mark type as beforefieldinit  </p>
+  </li>
+  <li>
+    <p>    <strong>static</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>return</strong> instance;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p><strong>5. Fully lazy instantiation</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>
+    <p>Here, instantiation is triggered by the first reference to the static member of the nested class, that only occurs in Instance.</p>
+  </li>
+  <li>
+    <p>This means the implementation is fully lazy, but has all the performance benefits of the previous ones.</p>
+  </li>
+  <li>
+    <p>Note that although nested classes have access to the enclosing class’s private members, the reverse is not true, hence the need for instance to be internal here.</p>
+  </li>
+  <li>
+    <p>That doesn’t raise any other problems, though, as the class itself is private.</p>
+  </li>
+  <li>
+    <p>The code is more complicated in order to make the instantiation lazy.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> <strong>readonly</strong> Singleton instance = <strong>new</strong> Singleton();  </p>
+  </li>
+  <li>
+    <p>    // Explicit static constructor to tell C# compiler  </p>
+  </li>
+  <li>
+    <p>    // not to mark type as beforefieldinit  </p>
+  </li>
+  <li>
+    <p>    <strong>static</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>return</strong> instance;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>}  </p>
+  </li>
+</ol>
+
+<p><strong>6. Using .NET 4’s Lazy&lt;T&gt; type</strong></p>
+
+<p> </p>
+
+<p>Explanation of the following code:</p>
+
+<ol>
+  <li>
+    <p>If you’re using .NET 4 (or higher) then you can use the System.Lazy&lt;T&gt; type to make the laziness really simple.</p>
+  </li>
+  <li>
+    <p>All you need to do is pass a delegate to the constructor that calls the Singleton constructor, which is done most easily with a lambda expression.</p>
+  </li>
+  <li>
+    <p>It also allows you to check whether or not the instance has been created with the IsValueCreated property.</p>
+  </li>
+</ol>
+
+<!-- end list -->
+
+<ol>
+  <li>
+    <p><strong>public</strong> <strong>sealed</strong> <strong>class</strong> Singleton  </p>
+  </li>
+  <li>
+    <p>{  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> Singleton()  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+  <li>
+    <p>    <strong>private</strong> <strong>static</strong> <strong>readonly</strong> Lazy&lt;Singleton&gt; lazy = <strong>new</strong> Lazy&lt;Singleton&gt;(() =&gt; <strong>new</strong> Singleton());  </p>
+  </li>
+  <li>
+    <p>    <strong>public</strong> <strong>static</strong> Singleton Instance  </p>
+  </li>
+  <li>
+    <p>    {  </p>
+  </li>
+  <li>
+    <p>        <strong>get</strong>  </p>
+  </li>
+  <li>
+    <p>        {  </p>
+  </li>
+  <li>
+    <p>            <strong>return</strong> lazy.Value;  </p>
+  </li>
+  <li>
+    <p>        }  </p>
+  </li>
+  <li>
+    <p>    }  </p>
+  </li>
+</ol>
+
+<p>}</p>
+
+  </div><a class="u-url" href="/2020/12/23/Design-Patterns-Interview-Notes.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An blog for the beginners in Information Technology.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ssanjeevi" title="ssanjeevi"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
