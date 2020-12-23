@@ -1,12 +1,10 @@
 ---
 toc: true
 layout: post
-description: Azure API Management deployment using Azure Devops CI-CD Pipeline using ARM templates and Yaml file.
+description: 
 categories: [markdown]
 title: Azure API Management deployment using Azure Devops CI-CD Pipeline using ARM templates and Yaml file
 ---
-
-## Azure API Management deployment using Azure Devops CI-CD Pipeline using ARM templates and Yaml file
 
 Here am going to cover how to automate Azure API management deployment using Azure Devops CI-CD Pipeline using the Creator tool from this [Github repo](https://github.com/Azure/azure-api-management-devops-resource-kit).
 
