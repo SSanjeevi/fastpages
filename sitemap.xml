@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://lkgforit.com/fastpages/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://lkgforit.com/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/jupyter/2020/02/20/test.html</loc>
+<loc>https://lkgforit.com/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/2020/12/23/First-blog.html</loc>
+<loc>https://lkgforit.com/2020/12/23/First-blog.html</loc>
 <lastmod>2020-12-23T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/about/</loc>
+<loc>https://lkgforit.com/about/</loc>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/</loc>
+<loc>https://lkgforit.com/</loc>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/search/</loc>
+<loc>https://lkgforit.com/search/</loc>
 </url>
 <url>
-<loc>https://lkgforit.com/fastpages/categories/</loc>
+<loc>https://lkgforit.com/categories/</loc>
 </url>
 </urlset>
